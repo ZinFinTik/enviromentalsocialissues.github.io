@@ -44,7 +44,7 @@ main {
   padding: 2rem;
   max-width: 800px;
   margin: auto;
-  text-align: left; /* <- left-align all main content */
+  text-align: left;
   animation: fadeIn 1.2s ease-out;
 }
 
@@ -59,7 +59,6 @@ h1 {
   animation: slideText 3s infinite linear;
   text-shadow: 0 0 10px #00ffff88;
 }
-
 
 /* Text entrance animation */
 @keyframes fadeIn {
@@ -125,6 +124,9 @@ ul li {
     transform: translateY(-150vh);
     opacity: 0;
   }
+}
+
+/* Link Box Styling */
 .link-box {
   display: block;
   background-color: #1e1e1e;
@@ -143,7 +145,6 @@ ul li {
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
   background-color: #2a2a2a;
 }
-
 
 
 
