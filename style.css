@@ -50,7 +50,9 @@ main {
 
 h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  padding-left: 1rem;
   background: linear-gradient(90deg, #00ffff, #00d2ff, #00ffff);
   background-size: 200%;
   background-position: left;
