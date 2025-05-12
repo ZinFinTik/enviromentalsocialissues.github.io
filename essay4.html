@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Essay 1 – Environmental Impacts</title>
+  <title>Essay 1 – FEMA and Inequality</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -20,7 +20,7 @@
   <main>
     <h1>Essay 1: FEMA’s Bias Against Low-Income Neighborhoods</h1>
     <p>
-      [Your full essay content goes here. Add multiple <p> or <h2> tags as needed.]
+      [Your essay content goes here.]
     </p>
   </main>
 
@@ -30,19 +30,18 @@
     const container = document.querySelector(".circles");
 
     setInterval(() => {
+      if (container.children.length >= 50) return;
+
       const circle = document.createElement("span");
       const size = 10 + Math.random() * 20;
       circle.style.left = `${Math.random() * 100}%`;
       circle.style.width = `${size}px`;
       circle.style.height = `${size}px`;
-      circle.style.background = "rgba(255, 255, 255, 0.2)";
-      circle.style.position = "absolute";
+      circle.style.background = "rgba(255, 255, 255, 0.15)";
       circle.style.bottom = "-50px";
-      circle.style.borderRadius = "50%";
-      circle.style.animation = `float ${15 + Math.random() * 20}s linear infinite`;
+      circle.style.animation = `float ${15 + Math.random() * 20}s linear forwards`;
 
       container.appendChild(circle);
-
       setTimeout(() => container.removeChild(circle), 40000);
     }, 800);
   </script>
