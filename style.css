@@ -25,9 +25,10 @@ body {
   display: block;
   width: 20px;
   height: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15); /* lighter gray */
   animation: float 25s linear infinite;
+  border-radius: 50%;
+  bottom: -150px;
 }
 
 .circles span:nth-child(1) { left: 25%; top: 10%; animation-duration: 20s; }
