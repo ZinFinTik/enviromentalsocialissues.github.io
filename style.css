@@ -8,6 +8,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Navigation Bar */
 nav {
   background: #111;
   padding: 1rem;
@@ -18,24 +19,33 @@ nav {
 }
 
 nav a {
-  color: white;
-  margin: 0 15px;
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  color: #00ffff;
+  font-weight: bold;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s, background 0.3s;
-  padding: 6px 12px;
-  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
-  background: #222;
-  color: cyan;
+  background-color: rgba(0, 255, 255, 0.1);
+  color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
 }
 
+/* Main Content */
 main {
-  padding: 2em;
-  max-width: 900px;
+  padding: 2rem;
+  max-width: 800px;
   margin: auto;
+  text-align: center;
+  animation: fadeIn 1.2s ease-out;
 }
 
 h1 {
@@ -48,11 +58,6 @@ h1 {
   -webkit-text-fill-color: transparent;
   animation: slideText 3s infinite linear;
   text-shadow: 0 0 10px #00ffff88;
-}
-
-p {
-  color: #ccc;
-  line-height: 1.6;
 }
 
 /* Text entrance animation */
@@ -77,6 +82,7 @@ p {
   }
 }
 
+/* List Styling */
 ul {
   list-style: none;
   padding: 0;
@@ -87,11 +93,7 @@ ul li {
   font-size: 1.1rem;
 }
 
-li:hover {
-  transform: scale(1.02);
-}
-
-/* Bubble Animation */
+/* Background Bubble Animation */
 .circles {
   position: fixed;
   width: 100%;
