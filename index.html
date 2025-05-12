@@ -19,10 +19,7 @@
 
   <main>
     <h1>Environmental Impacts on Society</h1>
-    <p>
-      Welcome to our group project! Each member researched how environmental
-      factors impact different social issues.
-    </p>
+    <p>Welcome to our group project! Each member researched how environmental factors impact different social issues.</p>
     <ul>
       <li>Essay 1: FEMA's bias against low-income neighborhoods</li>
       <li>Essay 2: [Title of essay 2]</li>
@@ -32,28 +29,24 @@
     </ul>
   </main>
 
-  <!-- Floating Circles Container -->
   <div class="circles"></div>
 
-  <!-- JavaScript to spawn circles -->
   <script>
     const container = document.querySelector(".circles");
 
     setInterval(() => {
+      if (container.children.length >= 50) return;
+
       const circle = document.createElement("span");
       const size = 10 + Math.random() * 20;
       circle.style.left = `${Math.random() * 100}%`;
       circle.style.width = `${size}px`;
       circle.style.height = `${size}px`;
-      circle.style.background = "rgba(255, 255, 255, 0.2)";
-      circle.style.position = "absolute";
+      circle.style.background = "rgba(255, 255, 255, 0.15)";
       circle.style.bottom = "-50px";
-      circle.style.borderRadius = "50%";
-      circle.style.animation = `float ${15 + Math.random() * 20}s linear infinite`;
+      circle.style.animation = `float ${15 + Math.random() * 20}s linear forwards`;
 
       container.appendChild(circle);
-
-      // Cleanup
       setTimeout(() => container.removeChild(circle), 40000);
     }, 800);
   </script>
