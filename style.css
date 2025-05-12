@@ -44,7 +44,7 @@ main {
   padding: 2rem;
   max-width: 800px;
   margin: auto;
-  text-align: center;
+  text-align: left; /* <- left-align all main content */
   animation: fadeIn 1.2s ease-out;
 }
 
