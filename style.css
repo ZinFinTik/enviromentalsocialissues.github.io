@@ -25,7 +25,7 @@ body {
   display: block;
   width: 20px;
   height: 20px;
-  background: rgba(255, 255, 255, 0.4); /* lighter gray */
+  background: rgba(255, 255, 255, 0.15); /* lighter gray */
   animation: float 25s linear infinite;
   border-radius: 50%;
   bottom: -150px;
