@@ -1,90 +1,47 @@
-/* Global Styles */
+/* Base Styling */
 body {
   margin: 0;
   padding: 0;
-  background: #000;
-  color: white;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: #fff;
   overflow-x: hidden;
-  position: relative;
 }
 
-/* Floating Circles Background */
-.circles {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-}
-
-.circles span {
-  position: absolute;
-  display: block;
-  width: 20px;
-  height: 20px;
-  background: rgba(255, 255, 255, 0.15); /* lighter gray */
-  animation: float 25s linear infinite;
-  border-radius: 50%;
-  bottom: -150px;
-}
-
-.circles span:nth-child(1) { left: 25%; top: 10%; animation-duration: 20s; }
-.circles span:nth-child(2) { left: 10%; top: 30%; animation-duration: 30s; }
-.circles span:nth-child(3) { left: 70%; top: 20%; animation-duration: 25s; }
-.circles span:nth-child(4) { left: 90%; top: 50%; animation-duration: 35s; }
-.circles span:nth-child(5) { left: 50%; top: 80%; animation-duration: 40s; }
-.circles span:nth-child(6) { left: 20%; top: 60%; animation-duration: 22s; }
-.circles span:nth-child(7) { left: 80%; top: 10%; animation-duration: 27s; }
-.circles span:nth-child(8) { left: 30%; top: 90%; animation-duration: 32s; }
-
-@keyframes float {
-  0% { transform: translateY(0) scale(1); }
-  100% { transform: translateY(-100vh) scale(1.5); }
-}
-
-/* Navigation Bar */
 nav {
   background: #111;
-  padding: 1em 0;
+  padding: 1rem;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav a {
-  color: white;
-  margin: 0 15px;
+  color: #ccc;
+  margin: 0 1rem;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s, background 0.3s;
-  padding: 6px 12px;
-  border-radius: 4px;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  background: #222;
-  color: cyan;
+  color: #fff;
 }
 
-/* Main Content */
 main {
-  padding: 2em;
-  max-width: 900px;
+  padding: 2rem;
+  max-width: 800px;
   margin: auto;
+  text-align: center;
 }
 
-/* Hero Title */
 h1 {
-  font-size: 2.5em;
-  color: cyan;
-  margin-bottom: 0.3em;
-}
-
-/* Paragraph and Essay List */
-p {
-  color: #ccc;
-  line-height: 1.6;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #eee, #888);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 ul {
@@ -92,15 +49,40 @@ ul {
   padding: 0;
 }
 
-li {
-  margin: 0.5em 0;
-  padding: 0.5em;
-  background: #111;
-  border-left: 4px solid cyan;
-  transition: transform 0.2s;
+ul li {
+  margin: 0.5rem 0;
 }
 
-li:hover {
-  transform: scale(1.02);
+/* Bubble Animation */
+.circles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.circles span {
+  position: absolute;
+  display: block;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  bottom: -50px;
+  animation: float 20s linear forwards;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150vh);
+    opacity: 0;
+  }
 }
 
