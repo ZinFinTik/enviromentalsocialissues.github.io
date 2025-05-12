@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sources</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
   <div class="circles"></div>
 
@@ -12,8 +20,18 @@
     <a href="https://www.fema.gov/news-release/2023/03/15/inequity-report" class="link-box" target="_blank">
       FEMA Inequity Report – 2023
     </a>
-
-    <!-- more source links here -->
+    <a href="https://www.epa.gov/environmentaljustice" class="link-box" target="_blank">
+      EPA Environmental Justice Portal
+    </a>
+    <a href="https://www.nature.com/articles/d41586-020-02466-z" class="link-box" target="_blank">
+      Climate Change Disproportionately Affects the Poor – Nature Journal
+    </a>
+    <a href="https://www.wri.org/research/inequity-climate" class="link-box" target="_blank">
+      World Resources Institute – Climate Inequity Report
+    </a>
+    <a href="https://www.un.org/en/climatechange" class="link-box" target="_blank">
+      UN Climate Change Overview
+    </a>
 
   </main>
 
@@ -30,6 +48,8 @@
       circle.style.height = `${size}px`;
       circle.style.background = "rgba(255, 255, 255, 0.15)";
       circle.style.bottom = "-50px";
+      circle.style.position = "absolute";
+      circle.style.borderRadius = "50%";
       circle.style.animation = `float ${15 + Math.random() * 20}s linear forwards`;
 
       container.appendChild(circle);
@@ -37,5 +57,6 @@
     }, 800);
   </script>
 </body>
+</html>
 
 
