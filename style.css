@@ -18,23 +18,24 @@ nav {
 }
 
 nav a {
-  color: #ccc;
-  margin: 0 1rem;
+  color: white;
+  margin: 0 15px;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  transition: color 0.3s, background 0.3s;
+  padding: 6px 12px;
+  border-radius: 4px;
 }
 
 nav a:hover {
-  color: #00ffff;
+  background: #222;
+  color: cyan;
 }
 
 main {
-  padding: 2rem;
-  max-width: 800px;
+  padding: 2em;
+  max-width: 900px;
   margin: auto;
-  text-align: center;
-  animation: fadeIn 1.2s ease-out;
 }
 
 h1 {
@@ -47,6 +48,11 @@ h1 {
   -webkit-text-fill-color: transparent;
   animation: slideText 3s infinite linear;
   text-shadow: 0 0 10px #00ffff88;
+}
+
+p {
+  color: #ccc;
+  line-height: 1.6;
 }
 
 /* Text entrance animation */
@@ -79,6 +85,10 @@ ul {
 ul li {
   margin: 0.5rem 0;
   font-size: 1.1rem;
+}
+
+li:hover {
+  transform: scale(1.02);
 }
 
 /* Bubble Animation */
