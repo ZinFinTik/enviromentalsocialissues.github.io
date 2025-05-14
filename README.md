@@ -1,1 +1,1 @@
-# https://zinfintik.github.io/enviromentalsocialissues.github.io/
+# https://zinfintik.github.io/enviromentalsocialissues.github.io/home
